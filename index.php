@@ -3,7 +3,8 @@
 $links = array(
     "whatsapp" => "https://chat.whatsapp.com/invite/Hcz6GtqxJ8Z0C5NuUDhIrI", 
     "boeken" => "https://drive.google.com/drive/folders/0B3QX7v_nrvn9RjNDVWJUTVpWZzQ?usp=sharing", 
-    "samenvatting"=>"https://drive.google.com/drive/folders/1WdroHuz2JB9LXdveRVX25hGktHCHudfx?usp=sharing"
+    "samenvatting"=>"https://drive.google.com/drive/folders/1WdroHuz2JB9LXdveRVX25hGktHCHudfx?usp=sharing",
+    "memes"=>"https://www.reddit.com/r/Hanzememes/"
 );
 
 if (array_key_exists($_SERVER['REQUEST_URI'], $links)) {
