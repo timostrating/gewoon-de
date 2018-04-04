@@ -30,6 +30,6 @@
     </script>
 </head>
 <body>
-    homepage
+    <a href="/">terug</a>
 </body>
 </html>

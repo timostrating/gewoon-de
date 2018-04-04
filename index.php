@@ -5,7 +5,8 @@ $links = array(
     "boeken" => "https://drive.google.com/drive/folders/0B3QX7v_nrvn9RjNDVWJUTVpWZzQ?usp=sharing", 
     "samenvatting"=>"https://drive.google.com/drive/folders/1WdroHuz2JB9LXdveRVX25hGktHCHudfx?usp=sharing",
     "memes"=>"https://www.reddit.com/r/Hanzememes/",
-    "tentamens" => "/tentamens"
+    "tentamens" => "/tentamens",
+    "VERRASSING" => "/getmotivated"
 );
 
 if (array_key_exists($_SERVER['REQUEST_URI'], $links)) {
@@ -21,7 +22,7 @@ if (array_key_exists($_SERVER['REQUEST_URI'], $links)) {
 <body>
 
     <?php foreach ($links as $key => $value) {
-        echo '<a href="'.$key.'">'.$key.'</a> <br/>';
+        echo '<a href="'.$value.'">'.$key.'</a> <br/>';
     } ?>
 
 </body>
