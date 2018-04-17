@@ -14,8 +14,10 @@
         </style>
     </head>
     <body>
+<p style="background-color: #ff5200ab; padding: 20px; color: black; font-weight: bold;">
+<span style="text-decoration: underline;">DISCLAIMER</span>: Deze pagina is gemaakt als hobby project. <span style="text-decoration: underline;">CONTROLEER ALTIJD OF DE GEGEVENS DIE HIER OPSTAAN KLOPPEN</span>. Ga naar <a href="https://www.hanze.nl/nld/onderwijs/techniek/instituut-voor-communicatie-media--it/opleidingen/bachelor/hbo-ict/praktische-informatie/roosters-en-planningen/tentamenrooster" >deze pagina </a> van het hanze om het tentamen rooster in te zien.
+</p>
         <pre>
-
 
 <?php
 
