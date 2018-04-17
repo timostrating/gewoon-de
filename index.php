@@ -6,7 +6,8 @@ $links = array(
     "samenvatting"=>"https://drive.google.com/drive/folders/1WdroHuz2JB9LXdveRVX25hGktHCHudfx?usp=sharing",
     "memes"=>"https://www.reddit.com/r/Hanzememes/",
     "tentamens" => "/tentamens",
-    "VERRASSING" => "/getmotivated"
+    "VERRASSING" => "/motivatie_vinden_om_wat_te_doen_terwijl_itil_en_itsm_stom_zijn_en_je_liever_een_kikker_in_de_groepsapp_will_gooien",
+    "" => "/getmotivated",
 );
 
 if (array_key_exists($_SERVER['REQUEST_URI'], $links)) {
