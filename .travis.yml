@@ -21,7 +21,7 @@ script:
   - npm install @angular/cli -g
   - cd ./kikkerstages
   - npm install
-  - ng build --aot --prod --base-href "http://timostrating.github.io/gewoon-de"
+  - ng build --aot --prod --base-href "http://timostrating.github.io/gewoon-de/stages/"
   - cd ..
 
 deploy:
