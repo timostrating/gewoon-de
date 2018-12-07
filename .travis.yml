@@ -20,12 +20,14 @@ before_script:
 script: 
   - npm install @angular/cli -g
   - cd ./kikkerstages
-  - ng build -aot -prod -bh "http://timostrating.github.io/gewoon-de"
+  - npm install
+  - ng build --aot --prod --base-href "http://timostrating.github.io/gewoon-de"
+  - cd ..
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: dist
+  local_dir: stages
   on:
     branch: master
