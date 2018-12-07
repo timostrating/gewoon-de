@@ -19,6 +19,7 @@ before_script:
 
 script: 
   - npm install @angular/cli -g
+  - cd ./kikkerstages
   - ng build -aot -prod -bh "http://timostrating.github.io/gewoon-de"
 
 deploy:
