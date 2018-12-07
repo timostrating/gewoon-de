@@ -18,7 +18,7 @@ before_script:
  - sudo dpkg -i google-chrome*.deb
 
 script: 
-  - npm install ng
+  - npm install @angular/cli -g
   - ng build -aot -prod -bh "http://timostrating.github.io/gewoon-de"
 
 deploy:
