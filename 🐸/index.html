@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gewoon.de</title>
+    <meta name="viewport" content="width=500">
+    <style>
+*{box-sizing: border-box; user-select: none;}
+
+html, body{width:100%; height: 100%; user-selet: none;}
+
+body{
+    background: #009226; 
+    font-family: Helvetica;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+#imgs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#imgs .img {
+    padding: 30px 15px 0px;
+}
+
+#imgs .img span {
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0;
+}
+
+#scores table {
+    color: white;
+    width: 400px;
+}
+
+#scores table thead {
+    font-weight: bold;
+}
+
+#scores table td {
+    border: 1px solid #265f41;
+    padding: 5px 12px;
+    text-align: center;
+}
+
+
+@media all and (max-width: 960px) {
+    h1 {
+        font-size: 50px !important; 
+    }
+}
+
+
+h1 {
+    font-size: 5em;
+    color: white;
+    text-align: center;
+}
+
+
+a {
+    color: white;
+    margin-left: 5px;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body id="body">
+    <a href="https://github.com/timostrating/gewoon-de"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    
+    <a href="/">terug</a>
+
+    <h1>DE GROTE KIKKER CHALLENGE</h1>
+    <div id="scores">
+        <table>
+            <thead> <td>Naam:</td> <td>Score (20 punten is een taart):</td> </thead>
+            <tr> <td>Maarten</td>   <td>20 x 🐸</td> </tr>
+            <tr> <td>Casper</td>    <td>10 x 🐸</td> </tr>
+            <tr> <td>Hilko</td>     <td>🐸🐸🐸🐸🐸🐸🐸🐸🐸</td> </tr>
+	        <tr> <td>Detmer</td>    <td>🐸🐸🐸🐸🐸</td> </tr>
+            <tr> <td>Daniel</td>    <td>🐸🐸🐸</td> </tr>
+            <tr> <td>Simon</td>     <td>🐸🐸🐸</td> </tr>
+            <tr> <td>Florian</td>   <td>🐸🐸</td> </tr>
+            <tr> <td>Laurens</td>   <td>🐸🐸</td> </tr>
+            <tr> <td>Yaimon</td>    <td>🐸🐸</td> </tr>
+            <tr> <td>Remi</td>      <td>🐸🐸</td> </tr>
+            <tr> <td>Ruben</td>     <td>🐸</td> </tr>
+        </table>
+    </div>
+
+    <div id="imgs">
+        <div class="img">
+            <img src="1.jpeg" width="200" height="300"/>
+            <span>Locatie 🐸: Casper</span>
+            <span>Verhaal 🐸: Simon</span>
+        </div>
+        <div class="img">
+            <img src="2.jpeg" width="200" height="300"/>
+            <span>Locatie 🐸: Maarten</span>
+            <span>Verhaal 🐸: Maarten</span>
+        </div>    
+        <div class="img">
+            <img src="3.jpeg" width="200" height="300"/>
+            <span>Locatie 🐸: Maarten</span>
+            <span>Verhaal 🐸: Maarten</span>
+        </div>
+        <div class="img">
+            <img src="4.jpeg" width="200" height="300"/>
+            <span>Locatie 🐸: Casper, Hilko en Ruben</span>
+            <span>Verhaal 🐸: ???</span>
+        </div>
+        <div class="img">
+            <img src="5.jpeg" width="200" height="300"/>
+            <span>Locatie 🐸: Maarten</span>
+            <span>Verhaal 🐸: Maarten</span>
+        </div>
+        <div class="img">
+            <img src="6.jpeg" width="200" height="300"/>
+            <span>Locatie 🐸: Remi</span>
+            <span>Verhaal 🐸: Remi</span>
+        </div>
+	    <div class="img">
+            <img src="7.jpeg" width="200" height="300"/>
+            <span>School 🐸: Detmer</span>
+        </div>
+    	<div class="img">
+            <img src="8.jpeg" width="200" height="300"/>
+            <span>Vakantie 🐸: Casper </span>
+        </div>
+        <div class="img">
+            <img src="9.jpeg" width="200" height="300"/>
+            <span>Google 🐸: Yaimon</span>
+            <span>Kennis 🐸: Yaimon </span>
+        </div>
+        <div class="img">
+            <img src="10.jpeg" width="200" height="300"/>
+            <span>Naam 🐸: Maarten</span>
+            <span>Locatie 🐸: Casper </span>
+	        <span>Bonus 🐸: Casper </span>
+        </div>
+        <div class="img">
+            <img src="11.jpeg" width="200" height="300"/>
+            <span>Referentie 🐸🐸: Detmer</span>
+        </div>
+	    <div class="img">
+            <img src="12.jpeg" width="200" height="300"/>
+            <span>Referentie 🐸🐸: Laurens</span>
+        </div>
+    	<div class="img">
+            <img src="13.jpeg" width="200" height="300"/>
+            <span>Afbeelding 🐸: Hilko </span>
+            <span>Serie + episode 🐸: Hilko </span>
+        </div>
+	    <div class="img">
+            <img src="14.jpeg" width="200" height="300"/>
+            <span> Vroege bonus 🐸: Daniel  </span>
+        </div>
+	    <div class="img">
+            <img src="15.jpeg" width="200" height="300"/>
+            <span> Cultuur 🐸: Casper  </span>
+            <span> Cultuur 🐸: Casper  </span>
+        </div>
+        <div class="img">
+            <img src="16.jpeg" width="200" height="300"/>
+            <span> Puzzel 🐸🐸: Hilko  </span>
+        </div>
+        <div class="img">
+            <img src="17.jpeg" width="200" height="300"/>
+            <span> Vakantie 🐸🐸: Maarten  </span>
+            <span> Bonus 🐸: Casper  </span>
+        </div>
+	    <div class="img">
+            <img src="18.jpeg" width="200" height="300"/>
+            <span> Kerst 🐸🐸: Detmer  </span>
+        </div>
+        <div class="img">
+            <img src="19.jpeg" width="200" height="300"/>
+            <span> Kerst 🐸🐸: Simon  </span>
+        </div>
+        <div class="img">
+            <img src="20.jpeg" width="200" height="300"/>
+            <span> Dominoday 🐸🐸: Maarten  </span>
+            <span> Bonus 🐸🐸: Maarten  </span>
+        </div>
+        <div class="img">
+            <img src="21.jpeg" width="200" height="300"/>
+            <span> Game 🐸🐸: Maarten  </span>
+            <span> Speurtocht 🐸🐸: Hilko  </span>
+        </div>
+        <div class="img">
+            <img src="22.jpeg" width="200" height="300"/>
+            <span> sneeuw 🐸🐸: Daniel  </span>
+            <span> pop 🐸🐸: Hilko  </span>
+            <span> sneeuw 🐸🐸: Casper  </span>
+            <span> pop 🐸🐸: Maarten  </span>
+        </div>
+        <div class="img">
+            <img src="23.jpeg" width="200" height="300"/>
+            <span> Stages 🐸🐸: Florian  </span>
+        </div>
+    </div>
+</body>
+</html>
