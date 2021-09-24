@@ -1,0 +1,446 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        $(document).ready(function () {
+            var $body, $code_pre, $script_area, $style_elem, createElement, getURLParam, openComment,
+                openInteger, openString, prevAsterisk, prevSlash, scriptSyntax, styleSyntax, writeChar,
+                writeChars, _PAUSED, __js, _body_selection, _code_block, _code_pre, _codes, _colors,
+                _current_code, _script_area, _style_elem, _throttle, _version, _writing_rate;
+            _writing_rate = 1;
+            _throttle = {
+                start: 4821,
+                stop: 5344
+            };
+            _colors = {
+                background: "#333",
+                text: "#ccc",
+                offblack: "#111111",
+                dark: "#8d8b80",
+                selector: "#a6da27",
+                key: "#64d9ef",
+                value: "#fefefe",
+                hex: "#f92772",
+                text: "#fefefe",
+                string: "#d2cc70",
+                "var": "#66d9e0",
+                operator: "#f92772",
+                method: "#f9245c",
+                integer: "#fd971c",
+                run: "#ae81ff"
+            };
+            _body_selection = "document.body";
+            _current_code = 0;
+            _codes = [`
+/**********************************************************************
+ *                                                                    *
+ * __lets_get_started_with_making_a_GBA_game_and_run_it_on_the_web__  *
+ *                                                                    *
+ *********************************************************************/!
+     
+selector  { property: value; }    
+.comment  { color: ` + _colors.dark + `; }
+
+#my-code {
+    overflow: auto;
+    position: fixed; width: 50%;
+    margin: 0;
+    top: 0px; bottom: 0px; right: 0px;
+}
+
+body {
+    background-color: ` + _colors.background + `; color: ` + _colors.text + `;
+    overflow: hidden;
+    font-size: 13px; line-height: 1.4;
+    margin: 0;
+    width: 48%;
+}
+
+#my-code {
+    transition: all 1s, width 1s, opacity 1s;
+    background-color: ` + _colors.offblack + `; color: ` + _colors.text + `;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 24px 12px;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+pre em:not(.comment) { font-style: normal; }
+.comment       { color: ` + _colors.dark + `; }
+.selector      { color: ` + _colors.selector + `; }
+.selector .key { color: ` + _colors.selector + `; }
+.selector .int { color: ` + _colors.selector + `; }
+.key           { color: ` + _colors.key + `; }
+.int           { color: ` + _colors.integer + `; }
+.hex           { color: ` + _colors.hex + `; }
+.hex .int      { color: ` + _colors.hex + `; }
+.value         { color: ` + _colors.value + `; }
+.var           { color: ` + _colors[`var`] + `; }
+.operator      { color: ` + _colors.operator + `; }
+.string        { color: ` + _colors.string + `; }
+
+small { color: #cccccc; }
+center { margin: 50px; }
+
+~\`
+
+/* 
+* Much HTML much WOW
+*/
+var site = document.createElement("center");
+site.classList.add("me");
+` + _body_selection + `.appendChild(site); ~  
+
+var title = document.createElement("h1");
+title.innerHTML = "Timo Strating - Graphics / 3d / web programmer";
+site.appendChild(title); ~  
+
+var text = document.createElement("h3");
+text.innerHTML = 'MBO <small>application development</small> <span style="margin:0 20px">➡️</span> Bachalor <small>Software Engineering</small> <span style="margin:0 20px">➡️</span> Pre-Master <small>Computing Science</small>';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = '<a href="timostrating.nl" style="color:  wheat;">timostrating.nl</a>';
+site.appendChild(text); ~ 
+
+!
+\`
+
+#my-code {
+    top: 50%;
+    right: 0%;
+    width: 100%;
+}
+body { width: 100%; }
+
+.projects {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.p { height: 50%; }
+.p > * {
+    width: 100%;
+    height:100%;
+    object-fit:contain;
+}
+
+~\`
+
+var projects = document.createElement("div");
+projects.classList.add("projects");
+` + _body_selection + `.appendChild(projects);
+
+var p1 = document.createElement("div");
+p1.className = "p p1";
+p1.innerHTML = '<img src="https://timostrating.github.io/pokemon.gif" alt="gif">';
+projects.appendChild(p1); ~  
+
+var p2 = document.createElement("div");
+p2.className = "p p2";
+p2.innerHTML = '<img src="https://camo.githubusercontent.com/1b5fd2091d78787b8ad8e316642f06dc363dccda/68747470733a2f2f692e696d6775722e636f6d2f72496a4b4375372e676966" alt="gif" data-canonical-src="https://i.imgur.com/rIjKCu7.gif">';
+projects.appendChild(p2); ~ 
+
+var p3 = document.createElement("div");
+p3.className = "p p3";
+p3.innerHTML = '<img src="https://timostrating.github.io/everyday.gif" alt="gif">';
+projects.appendChild(p3); ~ 
+
+\`
+
+/****************************
+ *                          *
+ * __much_FANCY_such_WOW__  *
+ *                          *
+ ****************************/!
+
+\`
+
+document.getElementsByClassName("projects")[0].remove(); ~
+document.getElementsByClassName("me")[0].remove(); ~
+
+var site = document.createElement("center");
+site.classList.add("slide1");
+` + _body_selection + `.appendChild(site); ~  
+
+var text = document.createElement("h3");
+text.innerHTML = 'Tonc the best and basicly only resource <a href="https://www.coranac.com/tonc/text/hardware.htm" style="color:  wheat;">https://www.coranac.com/tonc/text/hardware.htm</a>';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = 'The gameboy advance sp (GBA) = The gameboy advance + backlight - 2XAA battery + rechargeable battery';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = '240x160 pixel, 15bit color LCD';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = '<b>No OS</b>, your hardware is your software';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = 'All you <b>may</b> get are 4 backgrounds and 128 sprites. 4 build in sounds and 2 sound inputs and can be played with using 10 buttons and MEMORY.';
+site.appendChild(text); ~ 
+
+\`
+/****************************
+ *                          *
+ * __so_discount_much_OS__  *
+ *                          *
+ ****************************/!
+\`
+
+document.getElementsByClassName("slide1")[0].remove(); ~
+
+var site = document.createElement("center");
+site.classList.add("slide2");
+` + _body_selection + `.appendChild(site); ~  
+
+var text = document.createElement("p");
+text.innerHTML = '00000000 to FFFFFFFF is your friend.';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = '0000:0000h - 0000:3FFFh -  BIOS readonly<br/>0200:0000h - 0203:FFFFh - External work RAM <br/>0300:0000h - 0300:7FFFh - Special fast ram RAM <br/>0400:0000h - 0400:03FFh - Memory-mapped IO';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = '0500:0000h - 0500:03FFh - 2 x 256 entries for 15 bit colors <br/>0600:0000h - 0601:7FFFh - Video RAM read and write <br/>0700:0000h - 0700:03FFh - sprite attributes (OAM)';
+site.appendChild(text); ~
+
+var text = document.createElement("p");
+text.innerHTML = '0800:0000h - ????:????? - your code max 32mb <br/>0E00:0000h - ????:????? - your games save data';
+site.appendChild(text); ~
+
+var text = document.createElement("p");
+text.innerHTML = 'you can program in c/cpp or raw assembly (or other languages that compile to assembly)<br/> Programming the GBA can be done by manipulating memory directly but there are header files that give a opengl 1.0 kind of syntax';
+site.appendChild(text);
+
+\`
+/***************************
+ *                         *
+ * __many_cool_such_wow__  *
+ *                         *
+ ***************************/!
+\`
+document.getElementsByClassName("slide2")[0].remove(); ~
+
+var site = document.createElement("center");
+site.classList.add("slide3");
+` + _body_selection + `.appendChild(site); ~  
+
+var text = document.createElement("p");
+text.innerHTML = 'So that screen 240x160 pixels refreshes compleetly 60 times a second.';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = 'But you can manipulate the video memory directly so be carefull.';
+site.appendChild(text); ~ 
+
+var text = document.createElement("p");
+text.innerHTML = 'To get anything on that nice screen you need to set the GBA in a specific mode.';
+site.appendChild(text); ~ 
+
+var p1 = document.createElement("div");
+p1.innerHTML = '<img src="https://www.coranac.com/tonc/img/gba_draw.png" width="300" alt="img">';
+site.appendChild(p1); ~  
+
+\`
+/*******************************
+ *                             *
+ * __many_screen_plenty_wow__  *
+ *                             *
+ *******************************/!
+\`
+document.getElementsByClassName("slide3")[0].remove(); ~
+
+var site = document.createElement("center");
+site.classList.add("slide4");
+` + _body_selection + `.appendChild(site); ~  
+
+var text = document.createElement("h1");
+text.innerHTML = 'Much Fancy';
+site.appendChild(text); ~ 
+
+var text = document.createElement("h1");
+text.innerHTML = 'Time for some DEMOs';
+site.appendChild(text); ~ 
+
+var text = document.createElement("small");
+text.innerHTML = '(demo effect may included)';
+site.appendChild(text); ~ 
+
+
+`];
+            $body = document.getElementsByTagName("body")[0];
+            _PAUSED = false;
+            createElement = function (tag, id) {
+                var el;
+                el = document.createElement(tag);
+                if (id) {
+                    el.id = id;
+                }
+                return el;
+            };
+            _style_elem = createElement("style", "style-elem");
+            _code_pre = createElement("pre", "my-code");
+            _script_area = createElement("div", "script-area");
+            $body.appendChild(_style_elem);
+            $body.appendChild(_code_pre);
+            $body.appendChild(_script_area);
+            $style_elem = document.getElementById("style-elem");
+            $code_pre = document.getElementById("my-code");
+            $script_area = document.getElementById("script-area");
+            openComment = false;
+            openInteger = false;
+            openString = false;
+            prevAsterisk = false;
+            prevSlash = false;
+            scriptSyntax = function (string, which) {
+                var s;
+                if (openInteger && !which.match(/[0-9\.]/) && !openString && !openComment) {
+                    s = string.replace(/([0-9\.]*)$/, "<em class=\"int\">$1</em>" + which);
+                } else if (which === '*' && !openComment && prevSlash) {
+                    openComment = true;
+                    s = string + which;
+                } else if (which === '/' && openComment && prevAsterisk) {
+                    openComment = false;
+                    s = string.replace(/(\/[^(\/)]*\*)$/, "<em class=\"comment\">$1/</em>");
+                } else if (which === 'r' && !openComment && string.match(/[\n ]va$/)) {
+                    s = string.replace(/va$/, "<em class=\"var\">var</em>");
+                } else if (which.match(/[\!\=\-\?]$/) && !openString && !openComment) {
+                    s = string + "<em class=\"operator\">" + which + "</em>";
+                } else if (which === "(" && !openString && !openComment) {
+                    s = string.replace(/(\.)?(?:([^\.\n]*))$/, "$1<em class=\"method\">$2</em>(");
+                } else if (which === '"' && !openComment) {
+                    s = openString ? string.replace(/(\"[^"\\]*(?:\\.[^"\\]*)*)$/,
+                        "<em class=\"string\">$1\"</em>") : string + which;
+                } else if (which === "~" && !openComment) {
+                    s = string + "<em class=\"run-command\">" + which + "</em>";
+                } else {
+                    s = string + which;
+                }
+                return s;
+            };
+            styleSyntax = function (string, which) {
+                var crazy_reghex, preformatted_string, s;
+                if (openInteger && !which.match(/[0-9\.\%pxems]/) && !openString && !openComment) {
+                    preformatted_string = string.replace(/([0-9\.\%pxems]*)$/,
+                        "<em class=\"int\">$1</em>");
+                } else {
+                    preformatted_string = string;
+                }
+                if (which === '*' && !openComment && prevSlash) {
+                    openComment = true;
+                    s = preformatted_string + which;
+                } else if (which === '/' && openComment && prevAsterisk) {
+                    openComment = false;
+                    s = preformatted_string.replace(/(\/[^(\/)]*\*)$/,
+                    "<em class=\"comment\">$1/</em>");
+                } else if (which === ':') {
+                    s = preformatted_string.replace(/([a-zA-Z- ^\n]*)$/, '<em class="key">$1</em>:');
+                } else if (which === ';') {
+                    crazy_reghex =
+                        /((#[0-9a-zA-Z]{6})|#(([0-9a-zA-Z]|\<em class\=\"int\"\>|\<\/em\>){12,14}|([0-9a-zA-Z]|\<em class\=\"int\"\>|\<\/em\>){8,10}))$/;
+                    if (preformatted_string.match(crazy_reghex)) {
+                        s = preformatted_string.replace(crazy_reghex, '<em class="hex">$1</em>;');
+                    } else {
+                        s = preformatted_string.replace(/([^:]*)$/, '<em class="value">$1</em>;');
+                    }
+                } else if (which === '{') {
+                    s = preformatted_string.replace(/(.*)$/, '<em class="selector">$1</em>{');
+                } else {
+                    s = preformatted_string + which;
+                }
+                return s;
+            };
+            __js = false;
+            _code_block = "";
+            writeChar = function (which) {
+                var char, code_html, prior_block_match, prior_comment_match, script_tag;
+                if (which === "!") {
+                    _PAUSED = true;
+                }
+                if (which === "`") {
+                    which = "";
+                    __js = !__js;
+                }
+                if (__js) {
+                    if (which === "~" && !openComment) {
+                        script_tag = createElement("script");
+                        prior_comment_match = /(?:\*\/([^\~]*))$/;
+                        prior_block_match = /([^~]*)$/;
+                        if (_code_block.match(prior_comment_match)) {
+                            script_tag.innerHTML = _code_block.match(prior_comment_match)[0].replace(
+                                "*/", "") + "\n\n";
+                        } else {
+                            script_tag.innerHTML = _code_block.match(prior_block_match)[0] + "\n\n";
+                        }
+                        $script_area.innerHTML = "";
+                        $script_area.appendChild(script_tag);
+                    }
+                    char = which;
+                    code_html = scriptSyntax($code_pre.innerHTML, char);
+                } else {
+                    char = which === "~" ? "" : which;
+                    $style_elem.innerHTML += char;
+                    code_html = styleSyntax($code_pre.innerHTML, char);
+                }
+                prevAsterisk = which === "*";
+                prevSlash = (which === "/") && !openComment;
+                openInteger = which.match(/[0-9]/) || (openInteger && which.match(/[\.\%pxems]/)) ?
+                    true : false;
+                if (which === '"') {
+                    openString = !openString;
+                }
+                _code_block += which;
+                return $code_pre.innerHTML = code_html;
+            };
+            writeChars = function (message, index, interval) {
+                if (index < message.length) {
+                    if (index >= _throttle.start && index < _throttle.stop) {
+                        interval = 1;
+                    } else {
+                        interval = _writing_rate;
+                    }
+                    $code_pre.scrollTop = $code_pre.scrollHeight;
+                    if (_PAUSED === false) {
+                        let times = 0;
+                        do {
+                           writeChar(message[index++]);
+                        } while (times++ < 1)
+                    }
+                    return setTimeout((function () {
+                        return writeChars(message, index, interval);
+                    }), interval);
+                }
+            };
+            getURLParam = function (key, url) {
+                var match;
+                if (typeof url === 'undefined') {
+                    url = window.location.href;
+                }
+                match = url.match('[?&]' + key + '=([^&]+)');
+                if (match) {
+                    return match[1];
+                } else {
+                    return 0;
+                }
+            };
+            _version = getURLParam("billy");
+            writeChars(_codes[_version], 0, _writing_rate);
+            return jQuery(function () {
+                return $(document).mouseup(function () {
+                    return _PAUSED = false;
+                });
+            });
+        });
+
+    }).call(this);
+</script>
